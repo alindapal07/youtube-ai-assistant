@@ -1,0 +1,13 @@
+langchain
+langchain_groq	
+dotenv
+ipykernel
+langchain-openai
+langgraph
+streamlit
+pillow
+langchain-community
+youtube_transcript_api
+langchain-huggingface
+faiss-cpu
+sentence-transformers
