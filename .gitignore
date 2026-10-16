@@ -5,7 +5,20 @@ build/
 dist/
 wheels/
 *.egg-info
+.pytest_cache/
+.coverage
 
-# Virtual environments
-.venv
+# Virtual environments & secrets
+.venv/
+venv/
 .env
+.env.local
+
+# Node & Extension build outputs
+node_modules/
+extension/dist/
+extension/node_modules/
+
+# FAISS stored indexes (ignore binaries, preserve .gitkeep)
+backend/app/storage/*/
+!backend/app/storage/.gitkeep

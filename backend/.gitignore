@@ -1,0 +1,40 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.env
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Environment files
+.env
+.env.local
+
+# Unit test & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# FAISS stored indexes (do not commit indexed vector binaries)
+app/storage/*/
+!app/storage/.gitkeep
+

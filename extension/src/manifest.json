@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube AI Assistant",
+  "version": "1.0.0",
+  "description": "Interact with any YouTube video transcript through a real-time AI-powered side panel chatbot.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Open YouTube AI Assistant"
+  },
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.youtube.com/*",
+    "http://localhost:8000/*",
+    "http://127.0.0.1:8000/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["content/youtube-content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  }
+}
+
